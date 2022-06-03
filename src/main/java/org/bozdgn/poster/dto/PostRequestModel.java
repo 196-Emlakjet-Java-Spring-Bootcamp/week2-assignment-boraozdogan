@@ -5,6 +5,9 @@ import org.bozdgn.poster.model.Category;
 import java.util.ArrayList;
 import java.util.List;
 
+// NOTE(bora): This is the required fields for creating/altering a `Post`.
+// Automatically-generated fields are omitted. This is used in controller
+// where the API accepts input in form of a `Post`.
 public class PostRequestModel {
     private final String author;
     private final String title;
@@ -30,7 +33,6 @@ public class PostRequestModel {
     public String title() {
         return title;
     }
-
 
     public String text() {
         return text;
