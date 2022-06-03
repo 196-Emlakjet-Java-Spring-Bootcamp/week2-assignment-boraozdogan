@@ -1,3 +1,11 @@
+# Poster API
+A simple CRUD application made with Spring Boot.
+
+## Tech Stack
+- Spring Boot
+- Java 17
+- H2 In-Memory Database
+
 
 ## API Endpoints
 
@@ -61,5 +69,4 @@ findPostByCategory(categoryName)
 - getLatestPost() en son 3 postu getirsin 
 
 H2 database
-
 -->
