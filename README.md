@@ -11,6 +11,20 @@
 | `POST /posts`              | Create a post                                 |
 | `PUT /posts/{id}`          | Modify a post                                 |
 
+`POST /posts` and `PUT /posts` accept JSON data with following fields: "author", "title", "text", "categories".
+
+"categories" field is a list of `string`s while all other fields are`string`s.
+
+Here is an example request body:
+
+```json
+{
+"author": "Can Simit",
+"title": "Can Simidim",
+"text": "Benim adım Can Simit.",
+"categories": ["CATEGORY1"]
+}
+```
 
 <!--
 ## Requirements, sort of..

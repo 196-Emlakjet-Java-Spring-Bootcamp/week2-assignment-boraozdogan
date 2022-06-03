@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Poster API Help</title>
+</head>
+<body>
+  <h1>Endpoints</h1>
+
+  <dl>
+    <dt><code>GET</code> /posts</dt>
+    <dd>List all posts</dd>
+
+    <dt><code>GET</code> /posts/latest</dt>
+    <dd>List latest 3 posts (sorted by creation date)</dd>
+
+    <dt><code>GET</code> /posts/{id}</dt>
+    <dd>Show a specific post</dd>
+
+    <dt><code>GET</code> /posts/of/<code>{author}</code></dt>
+    <dd>List all posts from an author</dd>
+
+    <dt><code>GET</code> /posts/in/<code>{category}</code></dt>
+    <dd>List all posts belongs to a category</dd>
+
+    <dt><code>POST</code> /posts</dt>
+    <dd>Create a post</dd>
+
+    <dt><code>PUT</code> /posts/{id}`</dt>
+    <dd>Modify a post</dd>
+  </dl>
+
+  <p>
+    <code>POST /posts</code> and <code>PUT /posts</code> accept JSON data with
+    following fields: "author", "title", "text", "categories".
+  </p>
+  
+  <p>"categories" field is a list of <code>string</code>s while all other fields are<code>string</code>s.</p>
+
+  <p>Here is an example request body:</p>
+  <pre>{
+    "author": "Can Simit",
+    "title": "Can Simidim",
+    "text": "Benim adım Can Simit.",
+    "categories": ["CATEGORY1"]
+}</pre>
+
+</body>
+</html>
