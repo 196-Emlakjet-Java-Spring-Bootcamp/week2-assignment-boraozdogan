@@ -21,16 +21,10 @@ public class Post {
     private String text;
 
     // NOTE(bora): This is to register `Category` enum as an entity
-    // and hold a list of categories as a field in post. Alternatively, I could
-    // make a separate entity and make a "one-to-many" relationship between these
-    // entities. That approach may work even better with a subcategory system, though.
-    // So, I may alter this design later.
-    //
-    // Basically, what I do is create another collection for "categories" and connect
-    // that to current collection, using post ID as reference.
-    @ElementCollection(fetch = FetchType.EAGER)  // This is for storing a list of elements.
-    @CollectionTable(name = "category", joinColumns = @JoinColumn(name = "id"))  // This is for specifying table name and reference "key".
-    @Enumerated(EnumType.STRING) // This is for using an `enum`. `EnumType` can be `ORDINAL` or `STRING`.
+    // and hold a list of categories as a field in post.
+    @ElementCollection(fetch = FetchType.EAGER)
+    @CollectionTable(name = "category", joinColumns = @JoinColumn(name = "id"))
+    @Enumerated(EnumType.STRING)
     private final List<Category> categories = new ArrayList<>();
 
     // NOTE(bora): A no-arg constructor so JPA stops complaining about not being able to initialize.
